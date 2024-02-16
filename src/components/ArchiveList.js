@@ -1,27 +1,26 @@
-import React from 'react';
-import ArchiveItem from './ArchiveItem';
+import React from "react";
+import ArchiveItem from "./ArchiveItem";
 
 function ArchiveList({ notes, onDelete, onArchive }) {
   if (notes.length === 0) {
-    return (
-      <div className='notes-list__empty-message'>Tidak ada catatan</div>
-    )
+    return <div className="notes-list__empty-message">Tidak ada catatan</div>;
   }
   return (
-    notes
-      .filter(note => note.archived === true)
-      .map(note => (
-        <div className="notes-list" key={+new Date()}>
-          <ArchiveItem 
-            key={notes.id} 
+    <div className="notes-list" key={+new Date()}>
+      {notes
+        .filter((note) => note.archived === true)
+        .map((note) => (
+          <ArchiveItem
+            key={notes.id}
             id={note.id}
             archived={note.archived}
-            onDelete={onDelete} 
+            onDelete={onDelete}
             onArchive={onArchive}
-            {...note} />
-        </div>
-      ))
-    )
-};
+            {...note}
+          />
+        ))}
+    </div>
+  );
+}
 
 export default ArchiveList;
