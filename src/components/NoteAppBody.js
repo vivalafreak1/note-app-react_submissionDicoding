@@ -43,7 +43,7 @@ class NoteAppBody extends React.Component {
             id: +new Date(),
             title,
             body,
-            createdAt: +new Date(),
+            createdAt: new Date().toISOString(),
             archived: false,
           },
         ],
