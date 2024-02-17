@@ -1,5 +1,4 @@
 import React from "react";
-import NoteItem from "./NoteItem";
 
 function SearchNote({ keyword, setKeyword }) {
   const handleSearch = (event) => {
