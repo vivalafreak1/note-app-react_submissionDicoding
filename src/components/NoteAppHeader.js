@@ -1,8 +1,6 @@
 import React from "react";
 import { getInitialData } from "../utils/data";
 
-import SearchNote from "./SearchNote";
-
 class NoteAppHeader extends React.Component {
   constructor(props) {
     super(props);
@@ -26,8 +24,7 @@ class NoteAppHeader extends React.Component {
   render() {
     return (
       <div className="note-app__header">
-        <h1>Notes</h1>
-        <SearchNote />
+        <h1>Notes App</h1>
       </div>
     );
   }
