@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SearchNote({ keyword, setKeyword }) {
+export default function SearchNote({ keyword, setKeyword }) {
   const handleSearch = (event) => {
     setKeyword(event.target.value);
   };
@@ -17,5 +17,3 @@ function SearchNote({ keyword, setKeyword }) {
     </div>
   );
 }
-
-export default SearchNote;

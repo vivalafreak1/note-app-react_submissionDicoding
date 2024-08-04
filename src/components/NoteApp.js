@@ -11,17 +11,15 @@ class NoteApp extends React.Component {
     this.state = {
       theme: savedTheme,
     };
-
-    this.toggleTheme = this.toggleTheme.bind(this);
   }
 
-  toggleTheme() {
+  toggleTheme = () => {
     this.setState((prevState) => {
       const newTheme = prevState.theme === 'dark' ? 'light' : 'dark';
       localStorage.setItem('theme', newTheme);
       return { theme: newTheme };
     });
-  }
+  };
 
   componentDidMount() {
     document.body.className = this.state.theme;

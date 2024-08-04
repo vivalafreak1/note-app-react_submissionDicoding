@@ -3,7 +3,7 @@ import ArchiveItemContent from './ArchiveItemContent';
 import { showFormattedDate } from '../utils/data';
 import ArchiveItemAction from './NoteItemAction';
 
-function ArchiveItem({
+export default function ArchiveItem({
   title,
   createdAt,
   body,
@@ -30,5 +30,3 @@ function ArchiveItem({
     </div>
   );
 }
-
-export default ArchiveItem;

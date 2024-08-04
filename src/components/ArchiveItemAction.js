@@ -2,7 +2,12 @@ import React from 'react';
 import DeleteButton from './DeleteButton';
 import ArchiveButton from './ArchiveButton';
 
-function ArchiveItemAction({ id, onDelete, onArchive, archived }) {
+export default function ArchiveItemAction({
+  id,
+  onDelete,
+  onArchive,
+  archived,
+}) {
   return (
     <div className="note-item__action">
       <DeleteButton id={id} onDelete={onDelete} />
@@ -10,5 +15,3 @@ function ArchiveItemAction({ id, onDelete, onArchive, archived }) {
     </div>
   );
 }
-
-export default ArchiveItemAction;

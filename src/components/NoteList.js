@@ -2,7 +2,7 @@ import React from 'react';
 import NoteItem from './NoteItem';
 import EmptyMessage from './EmptyMessage';
 
-function NoteList({ notes, onDelete, onArchive }) {
+export default function NoteList({ notes, onDelete, onArchive }) {
   const listNotes = notes.filter((note) => !note.archived);
 
   if (!listNotes.length) {
@@ -25,5 +25,3 @@ function NoteList({ notes, onDelete, onArchive }) {
     </div>
   );
 }
-
-export default NoteList;

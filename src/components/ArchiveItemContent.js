@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ArchiveItemContent({ title, createdAt, body }) {
+export default function ArchiveItemContent({ title, createdAt, body }) {
   return (
     <div className="note-item__content">
       <h3 className="note-item__title">{title}</h3>
@@ -9,5 +9,3 @@ function ArchiveItemContent({ title, createdAt, body }) {
     </div>
   );
 }
-
-export default ArchiveItemContent;

@@ -2,7 +2,7 @@ import React from 'react';
 import ArchiveItem from './ArchiveItem';
 import EmptyMessage from './EmptyMessage';
 
-function ArchiveList({ notes, onDelete, onArchive }) {
+export default function ArchiveList({ notes, onDelete, onArchive }) {
   const archivedNotes = notes.filter((note) => note.archived);
 
   if (!archivedNotes.length) {
@@ -14,7 +14,7 @@ function ArchiveList({ notes, onDelete, onArchive }) {
         .filter((note) => note.archived === true)
         .map((note) => (
           <ArchiveItem
-            key={notes.id}
+            key={note.id}
             id={note.id}
             archived={note.archived}
             onDelete={onDelete}
@@ -25,5 +25,3 @@ function ArchiveList({ notes, onDelete, onArchive }) {
     </div>
   );
 }
-
-export default ArchiveList;
