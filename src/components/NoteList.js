@@ -1,9 +1,12 @@
-import React from "react";
-import NoteItem from "./NoteItem";
+import React from 'react';
+import NoteItem from './NoteItem';
+import EmptyMessage from './EmptyMessage';
 
-function NoteList({ notes, onDelete, onArchive, archived }) {
-  if (notes.length === 0) {
-    return <div className="notes-list__empty-message">Tidak ada catatan</div>;
+function NoteList({ notes, onDelete, onArchive }) {
+  const listNotes = notes.filter((note) => !note.archived);
+
+  if (!listNotes.length) {
+    return <EmptyMessage />;
   }
   return (
     <div className="notes-list">
@@ -11,7 +14,7 @@ function NoteList({ notes, onDelete, onArchive, archived }) {
         .filter((note) => note.archived === false)
         .map((note) => (
           <NoteItem
-            key={notes.id}
+            key={note.id}
             id={note.id}
             archived={note.archived}
             onDelete={onDelete}

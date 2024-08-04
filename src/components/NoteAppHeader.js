@@ -1,13 +1,13 @@
-import React from "react";
-import { getInitialData } from "../utils/data";
+import React from 'react';
+import { getInitialData } from '../utils/data';
 
 class NoteAppHeader extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       notes: getInitialData(),
-      searchQuery: "",
-      setInput: "",
+      searchQuery: '',
+      setInput: '',
     };
 
     //binding

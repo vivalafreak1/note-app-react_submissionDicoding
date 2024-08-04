@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 class DeleteButton extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class DeleteButton extends React.Component {
 
   onClickHandler() {
     const confirmDelete = window.confirm(
-      "Apakah Anda yakin ingin menghapus catatan ini?"
+      'Apakah Anda yakin ingin menghapus catatan ini?'
     );
     if (confirmDelete) {
       this.props.onDelete(this.props.id);

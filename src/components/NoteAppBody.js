@@ -1,17 +1,17 @@
-import React from "react";
-import NoteList from "./NoteList";
-import ArchiveList from "./ArchiveList";
-import { getInitialData } from "../utils/data";
+import React from 'react';
+import NoteList from './NoteList';
+import ArchiveList from './ArchiveList';
+import { getInitialData } from '../utils/data';
 
-import NoteInput from "./NoteInput";
-import SearchNote from "./SearchNote";
+import NoteInput from './NoteInput';
+import SearchNote from './SearchNote';
 
 class NoteAppBody extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       notes: getInitialData(),
-      keyword: "",
+      keyword: '',
     };
 
     //binding

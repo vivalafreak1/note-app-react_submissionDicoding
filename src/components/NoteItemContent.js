@@ -7,7 +7,7 @@ function NoteItemContent({ title, createdAt, body }) {
       <p className="note-item__date">{createdAt}</p>
       <p className="note-item__body">{body}</p>
     </div>
-  )
+  );
 }
 
 export default NoteItemContent;

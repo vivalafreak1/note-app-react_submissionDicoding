@@ -1,9 +1,12 @@
-import React from "react";
-import ArchiveItem from "./ArchiveItem";
+import React from 'react';
+import ArchiveItem from './ArchiveItem';
+import EmptyMessage from './EmptyMessage';
 
 function ArchiveList({ notes, onDelete, onArchive }) {
-  if (notes.length === 0) {
-    return <div className="notes-list__empty-message">Tidak ada catatan</div>;
+  const archivedNotes = notes.filter((note) => note.archived);
+
+  if (!archivedNotes.length) {
+    return <EmptyMessage />;
   }
   return (
     <div className="notes-list" key={+new Date()}>
