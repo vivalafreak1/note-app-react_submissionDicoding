@@ -64,7 +64,9 @@ class NoteInput extends React.Component {
           value={this.state.body}
           onChange={this.onBodyChangeEventHandler}
         />
-        <button type="submit">Buat</button>
+        <button className="note-input__submit" type="submit">
+          Buat
+        </button>
       </form>
     );
   }

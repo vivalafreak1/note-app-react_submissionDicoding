@@ -1,5 +1,6 @@
 import React from 'react';
 import { getInitialData } from '../utils/data';
+import logo from '../assets/logo.png';
 
 class NoteAppHeader extends React.Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class NoteAppHeader extends React.Component {
   render() {
     return (
       <div className="note-app__header">
+        <img src={logo} alt="logo" />
         <h1>Notes App</h1>
       </div>
     );

@@ -47,6 +47,11 @@ textarea::placeholder {
   border-bottom: 1px solid #aaa;
 }
 
+.note-app__header img {
+  width: 32px;
+  height: 32px;
+}
+
 .note-app__header h1 {
   margin: 8px 0;
   flex: 1;
@@ -200,4 +205,92 @@ textarea::placeholder {
   .notes-list {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/* Dark Mode Styles */
+body.dark {
+  background-color: #202124;
+  color: white;
+}
+
+body.dark input,
+body.dark textarea {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #aaa;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #aaa;
+}
+
+body.dark .note-app__header h1 {
+  color: white;
+}
+
+body.dark .note-input__submit {
+  background-color: #333;
+  color: white;
+  border: 1px solid #aaa;
+}
+
+body.dark .note-input__submit:hover {
+  background-color: #444;
+}
+/* Light Mode Styles */
+body.light {
+  background-color: #ffffff;
+  color: black;
+}
+
+body.light .note-app__header h1 {
+  color: #333;
+}
+
+body.light .note-item__archive-button {
+  color: #fcce00;
+}
+
+body.light .note-item__archive-button:hover {
+  color: #fc9700;
+}
+
+body.light input,
+body.light textarea {
+  background-color: transparent;
+  color: black;
+  border: 1px solid #333;
+}
+
+body.light input::placeholder,
+body.light textarea::placeholder {
+  color: #333;
+}
+
+body.light .note-input__submit {
+  background-color: #ddd;
+  color: black;
+  border: 1px solid #333;
+}
+
+body.light .note-input__submit:hover {
+  background-color: #ccc;
+}
+
+/* Floating Button Styles */
+.theme-toggle-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.theme-toggle-button:hover {
+  background-color: #0056b3;
 }
