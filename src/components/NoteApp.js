@@ -2,6 +2,7 @@ import React from 'react';
 import NoteAppHeader from './NoteAppHeader';
 import NoteAppBody from './NoteAppBody';
 import ThemeToggleButton from './ThemeToggleButton';
+import NoteAppFooter from './NoteAppFooter';
 
 class NoteApp extends React.Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class NoteApp extends React.Component {
         <NoteAppHeader />
         <NoteAppBody />
         <ThemeToggleButton onToggleTheme={this.toggleTheme} />
+        <NoteAppFooter />
       </div>
     );
   }

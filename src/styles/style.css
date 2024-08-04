@@ -185,6 +185,17 @@ textarea::placeholder {
   color: #b00020;
 }
 
+.note-app__footer {
+  text-align: center;
+  padding: 16px;
+  border-top: 1px solid #aaa;
+}
+
+.note-app__footer p {
+  margin: 0;
+  color: inherit;
+}
+
 @media only screen and (min-width: 500px) {
   .notes-list {
     grid-template-columns: 1fr 1fr;
@@ -238,6 +249,15 @@ body.dark .note-input__submit {
 body.dark .note-input__submit:hover {
   background-color: #444;
 }
+
+body.dark .note-app__footer {
+  border-top: 1px solid #444;
+}
+
+body.dark .note-app__footer p {
+  color: #aaa;
+}
+
 /* Light Mode Styles */
 body.light {
   background-color: #ffffff;
@@ -276,6 +296,14 @@ body.light .note-input__submit {
 
 body.light .note-input__submit:hover {
   background-color: #ccc;
+}
+
+body.light .note-app__footer {
+  border-top: 1px solid #ccc;
+}
+
+body.light .note-app__footer p {
+  color: #333;
 }
 
 /* Floating Button Styles */
